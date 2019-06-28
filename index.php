@@ -6,6 +6,7 @@ $monto = rand(10000, 100000);
 // Llamamos a la API para crear la transaccion. Esto nos devuelve la respuesta con el estado
 // y el valor del token que identificará la transaccion de aquí en mas
 $respuesta = PuntoPagos::CrearTransaccion($trx_id, $monto);
+echo $respuesta;
 if ($respuesta->{'token'} != null){
     // Esta es la URL a redirigir al cliente para que continue y efectue el pago en el medio que corresponde
     $url = PUNTOPAGOS_URL."/transaccion/procesar/".$respuesta->{'token'};
