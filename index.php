@@ -8,7 +8,7 @@ $monto = rand(10000, 100000);
 
 
 $respuesta = PuntoPagos::CrearTransaccion($trx_id, $monto);
-echo "Respuesta ", $respuesta;
+echo "Respuesta ", var_dump($respuesta);
 
 if ($respuesta->{'token'} != null){
     // Esta es la URL a redirigir al cliente para que continue y efectue el pago en el medio que corresponde
