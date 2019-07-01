@@ -1,8 +1,11 @@
 <html>
 <body>
 
-Welcome <?php echo $_POST["name"]; ?><br>
-Your email address is: <?php echo $_POST["email"]; ?>
-
+Welcome 
+  
+TRXID <?php echo $_POST["trx_id"]; ?><br>
+Monto: <?php echo $_POST["monto"]; ?><br>
+MedioPago:<?php echo $_POST["mediopago1"]; ?>
+  
 </body>
 </html>
