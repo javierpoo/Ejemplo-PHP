@@ -12,23 +12,15 @@
   
 <div class="container">
   <h2>Vertical (basic) form</h2>
-  <form action="welcome.php">
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-    </div>
+  <form action="welcome.php" method="post">
 
     <div class="form-group">
-      <label for="pwd">$trx_id:</label>
-      <input type="text" class="form-control" id="trx_id" placeholder="Enter password" value="<?php echo  rand(1, 1000000); ?>" name="monto">
+      <label for="trx_id">Id Transacción:</label>
+      <input type="text" class="form-control" id="trx_id" placeholder="Enter password" value="<?php echo  rand(1, 1000000); ?>" name="trx_id">
     </div>
     
     <div class="form-group">
-      <label for="pwd">$monto:</label>
+      <label for="monto">Monto:</label>
       <input type="text" class="form-control" id="monto" placeholder="Enter password" value="<?php echo  rand(10000, 100000); ?>" name="monto">
     </div>
 
