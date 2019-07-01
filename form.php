@@ -30,7 +30,7 @@
       <option value="">Ninguno</option>
       <option value="3">Webpay</option>
       <option value="10">Ripley</option>
-      <option value="21">BancoEstado Multicanal</option>
+      <option value="23">BancoEstado Multicanal</option>
     </select>
   </div>
     
