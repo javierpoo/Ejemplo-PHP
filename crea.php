@@ -5,7 +5,7 @@ require_once('puntopagos.class.php');
 // y el valor del token que identificará la transaccion de aquí en mas
 
 
-
+/*
 PuntoPagos::CrearTransaccionMP("987270", "23","4915");
 PuntoPagos::CrearTransaccionMP("1085636", "23","2970");
 PuntoPagos::CrearTransaccionMP("1126538", "23","3115");
@@ -60,3 +60,4 @@ PuntoPagos::CrearTransaccionMP("9240625", "23","2946");
 PuntoPagos::CrearTransaccionMP("9341072", "23","2794");
 PuntoPagos::CrearTransaccionMP("9426193", "23","7221");
 PuntoPagos::CrearTransaccionMP("9649767", "23","4031");
+*/
