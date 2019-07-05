@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Simulador PuntoPagos</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -11,7 +11,7 @@
 <body>
   
 <div class="container">
-  <h2>Vertical (basic) form</h2>
+  <h2>Simulador PuntoPagos</h2>
   <form action="welcome.php" method="post">
 
     <div class="form-group">
