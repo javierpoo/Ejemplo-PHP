@@ -9,8 +9,6 @@ $mediopago = $_POST["mediopago1"];
 $respuesta = PuntoPagos::CrearTransaccionMP($trx_id, $mediopago, $monto);
 echo "Respuesta ", var_dump($respuesta);
 
-error_log("Respuesta ".var_dump($respuesta));
-
 if ($respuesta->{'token'} != null){
     // Esta es la URL a redirigir al cliente para que continue y efectue el pago en el medio que corresponde
     $url = PUNTOPAGOS_URL."/transaccion/procesar/".$respuesta->{'token'};
