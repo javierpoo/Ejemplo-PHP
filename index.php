@@ -28,6 +28,8 @@
     <label for="mediopago1">Medio Pago</label>
     <select class="form-control" id="mediopago1" name="mediopago1">
       <option value="">Ninguno</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
       <option value="3">Webpay</option>
       <option value="10">Ripley</option>
       <option value="23">BancoEstado Multicanal</option>
