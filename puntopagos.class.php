@@ -40,7 +40,7 @@ class PuntoPagos {
         $funcion = 'transaccion/crear';
         $monto_str = number_format($monto, 2, '.', '');
 	$dt = date("D, d M Y H:i:s", time())." GMT";
-        $data = '{"fecha_expiracion":"'.$dt.'","trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'"}';
+        $data = '{"fecha_vencimiento":"'.$dt.'","trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'"}';
         $header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
     }
