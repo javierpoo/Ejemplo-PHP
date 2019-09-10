@@ -12,6 +12,10 @@
   
 <div class="container">
   <h2>Simulador PuntoPagos</h2>
+  <div>
+    Fecha: <?php echo  date("D, d M Y H:i:s", time())." GMT"; ?>
+  </div>
+  
   <form action="welcome.php" method="post">
 
     <div class="form-group">
