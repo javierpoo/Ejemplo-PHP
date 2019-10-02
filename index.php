@@ -40,10 +40,10 @@
       <option value="24">Millas Latam</option>
     </select>
   </div>
-    
+   <div class="form-group">  
     E-mail opcional: <input type="email" name="email">
-    
-    <button type="submit" class="btn btn-default">Submit</button>
+   </div> 
+   <button type="submit" class="btn btn-default">Submit</button>
   
   </form>
 </div>
