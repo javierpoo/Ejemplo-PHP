@@ -41,6 +41,7 @@
     </select>
   </div>
     
+    E-mail opcional: <input type="email" name="email">
     
     <button type="submit" class="btn btn-default">Submit</button>
   
