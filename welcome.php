@@ -4,9 +4,11 @@ require_once('puntopagos.class.php');
 $trx_id = $_POST["trx_id"];
 $monto = $_POST["monto"];
 $mediopago = $_POST["mediopago1"];
+email = $_POST["email"];
+
 // Llamamos a la API para crear la transaccion. Esto nos devuelve la respuesta con el estado
 // y el valor del token que identificará la transaccion de aquí en mas
-$respuesta = PuntoPagos::CrearTransaccionMP($trx_id, $mediopago, $monto);
+$respuesta = PuntoPagos::CrearTransaccionMP($trx_id, $mediopago, $monto, $email);
 echo "Respuesta ", var_dump($respuesta);
 
 if ($respuesta->{'token'} != null){
