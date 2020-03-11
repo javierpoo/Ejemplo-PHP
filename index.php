@@ -36,6 +36,7 @@
       <option value="2">2</option>
       <option value="3">Webpay</option>
       <option value="10">Ripley</option>
+      <option value="21">Hites</option>
       <option value="23">BancoEstado Multicanal</option>
       <option value="25">Millas Latam</option>
     </select>
