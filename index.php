@@ -16,7 +16,7 @@
     Fecha: <?php echo  date("D, d M Y H:i:s", time())." GMT"; ?>
   </div>
   
-  <form action="welcome.php" method="post">
+  <form action="crea.php" method="post">
 
     <div class="form-group">
       <label for="trx_id">Id Transacción:</label>
