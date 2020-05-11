@@ -33,12 +33,6 @@
       <input type="text" class="form-control" id="monto" name="monto">
     </div>
 
-    <div class="form-group">
-
-  </div>
-   <div class="form-group">  
-    E-mail opcional: <input type="email" name="email">
-   </div> 
    <button type="submit" class="btn btn-default">Submit</button>
   
   </form>
