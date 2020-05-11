@@ -20,17 +20,17 @@
 
     <div class="form-group">
       <label for="token">Token PuntoPagos</label>
-      <input type="text" class="form-control" id="trx_id" placeholder="Enter password" name="trx_id">
+      <input type="text" class="form-control" id="token" name="token">
     </div>
 
     <div class="form-group">
       <label for="trx_id">Id Trx Cliente</label>
-      <input type="text" class="form-control" id="trx_id" placeholder="Enter password" name="trx_id">
+      <input type="text" class="form-control" id="trx_id" name="trx_id">
     </div>
     
     <div class="form-group">
       <label for="monto">Monto:</label>
-      <input type="text" class="form-control" id="monto" placeholder="Enter password" name="monto">
+      <input type="text" class="form-control" id="monto" name="monto">
     </div>
 
     <div class="form-group">
