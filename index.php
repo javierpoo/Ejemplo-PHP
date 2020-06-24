@@ -42,6 +42,7 @@
       <option value="25">Millas Latam</option>
       <option value="26">Mach</option>
       <option value="27">Chek</option>
+      <option value="28">Sweetpay</option>
     </select>
   </div>
    <div class="form-group">  
