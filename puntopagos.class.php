@@ -65,7 +65,15 @@ class PuntoPagos {
         $header_array = PuntoPagos::TraerHeaderConsulta($header_funcion, $token, $trx_id, $monto_str);
         return json_decode(PuntoPagos::ExecuteCommandGET(PUNTOPAGOS_URL.'/'.$funcion.'/'.$token, $header_array));
     }
-
+	
+    function ConsultarMediosPago(){
+        $funcion = 'mediospago';
+        $header_funcion = 'mediospago';
+        $header_array = PuntoPagos::TraerHeaderMediosPago($header_funcion);
+        return json_decode(PuntoPagos::ExecuteCommandGET(PUNTOPAGOS_URL.'/'.$funcion, $header_array));
+    }
+	
+	
     public static function FirmarMensaje($str) {
         $signature = base64_encode(hash_hmac('sha1', $str, PUNTOPAGOS_SECRET, true));
         return "PP ".PUNTOPAGOS_KEY.":".$signature;
@@ -94,8 +102,21 @@ class PuntoPagos {
                               'Fecha: '. $fecha,
                               'Autorizacion:'.$firma);
 	      return $header_array;
-	  }
+  }
 
+    public static function TraerHeaderMediosPago($funcion)
+    {
+        $fecha = date("D, d M Y H:i:s", time())." GMT";
+        $mensaje = $funcion."\n".$fecha;
+        $firma = PuntoPagos::FirmarMensaje($mensaje);
+        $header_array = array('Accept: application/json',
+                              "Content-Type: application/json; charset=utf-8",
+                              'Accept-Charset: utf-8',
+                              'Fecha: '. $fecha,
+                              'Autorizacion:'.$firma);
+        return $header_array;
+    }
+	
     public static function ExecuteCommand($url, $header_array, $data) {
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_HTTPHEADER, $header_array);
