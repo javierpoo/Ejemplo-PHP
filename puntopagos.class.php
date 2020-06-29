@@ -70,7 +70,10 @@ class PuntoPagos {
         $funcion = 'transaccion/mediospago';
         $header_funcion = 'mediospago';
         $header_array = PuntoPagos::TraerHeaderMediosPago($header_funcion);
-        return json_decode(PuntoPagos::ExecuteCommandGET(PUNTOPAGOS_URL.'/'.$funcion, $header_array));
+    	echo $header_array;
+	$url = PUNTOPAGOS_URL.'/'.$funcion;
+	echo $url;
+        return json_decode(PuntoPagos::ExecuteCommandGET($url, $header_array));
     }
 	
 	
