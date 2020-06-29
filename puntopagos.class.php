@@ -67,7 +67,7 @@ class PuntoPagos {
     }
 	
     function ConsultarMediosPago(){
-        $funcion = 'transaccion/mediospago';
+        $funcion = 'TransactionService/mediospago';
         $header_funcion = 'mediospago';
         $header_array = PuntoPagos::TraerHeaderMediosPago($header_funcion);
     	echo $header_array;
