@@ -43,6 +43,7 @@
       <option value="26">Mach</option>
       <option value="27">Chek</option>
       <option value="28">Sweetpay</option>
+      <option value="29">Captura Diferida TBK</option>
     </select>
   </div>
    <div class="form-group">  
