@@ -25,6 +25,22 @@ class PuntoPagos {
         $header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
     }
+	
+    /**
+    * Captura diferida de un monto de una transacción previamente autorizada 
+    * @param string $trx_id Id de la transaccion asignado por la aplicacion cliente
+    * @param string $monto Monto del pago a cobrar a través de PuntoPagos
+    * @return array Respuesta
+    */
+
+    public static function CapturarTransaccion($trx_id, $monto)
+    {
+        $funcion = 'transaccion/capturar';
+        $monto_str = number_format($monto, 2, '.', '');
+        $data = '{"trx_id":"'.$trx_id.'","monto":"'.$monto_str.'"}';
+        $header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
+        return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
+    }
 
    /**
     *  Crea la transaccion ya habiendo seleccionado un medio de pago en la aplicacion, haciendo
