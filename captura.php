@@ -17,7 +17,10 @@
   </div>
   
   <form action="capturar.php" method="post">
-
+    <div class="form-group">
+      <label for="token">Token PuntoPagos</label>
+      <input type="text" class="form-control" id="token" name="token">
+    </div>
 
     <div class="form-group">
       <label for="trx_id">Id Trx Cliente</label>
