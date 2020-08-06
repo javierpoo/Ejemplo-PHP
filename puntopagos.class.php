@@ -41,7 +41,22 @@ class PuntoPagos {
 
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
     }
+    /**
+    * Anula una transacción
+    * @param string $trx_id Id de la transaccion asignado por la aplicacion cliente
+    * @param string $monto Monto del pago a cobrar a través de PuntoPagos
+    * @return array Respuesta
+    */
 
+    public static function AnularTransaccion($token, $trx_id, $monto){
+        $funcion = 'transaccion/anular';
+        $monto_str = number_format($monto, 2, '.', '');
+        $data = '{"trx_id":"'.$trx_id.'","token":"'.$token.'","monto":"'.$monto_str.'"}';
+        $header_array = PuntoPagos::TraerHeaderConsulta($funcion, $token, $trx_id, $monto_str);
+
+        return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
+    }
+	
    /**
     *  Crea la transaccion ya habiendo seleccionado un medio de pago en la aplicacion, haciendo
     * la redireccion correspondiente al medio de pago elegido
