@@ -16,7 +16,7 @@
     Fecha: <?php echo  date("D, d M Y H:i:s", time())." GMT"; ?>
   </div>
   
-  <form action="capturar.php" method="post">
+  <form action="anular.php" method="post">
     <div class="form-group">
       <label for="token">Token PuntoPagos</label>
       <input type="text" class="form-control" id="token" name="token">
