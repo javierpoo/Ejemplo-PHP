@@ -66,7 +66,7 @@ class PuntoPagos {
     * @return array Respuesta
     */
 
-    public static function CrearTransaccionMP($trx_id, $medio_pago, $monto, $email)
+    public static function CrearTransaccionMP($trx_id, $medio_pago, $monto, $email, $celular)
     {
         $funcion = 'transaccion/crear';
         $monto_str = number_format($monto, 2, '.', '');
@@ -74,7 +74,7 @@ class PuntoPagos {
 	    
 	//$dt = date("D, d M Y H:i:s", $currentTimeinSeconds)." GMT";
         //$data = '{"fecha_vencimiento":"'.$dt.'","trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'"}';
-        $data = '{"trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'","email":"'.$email.'"}';
+        $data = '{"trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'","email":"'.$email.'","celular":"'.$celular.'"}';
 
 	$header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
