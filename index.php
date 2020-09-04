@@ -49,6 +49,9 @@
    <div class="form-group">  
     E-mail opcional: <input type="email" name="email">
    </div> 
+   <div class="form-group">  
+    Celular opcional: <input type="celular" name="celular">
+   </div> 
    <button type="submit" class="btn btn-default">Submit</button>
   
   </form>
