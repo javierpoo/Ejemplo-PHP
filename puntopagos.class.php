@@ -113,7 +113,7 @@ class PuntoPagos {
 		$signature = base64_encode(hash_hmac('sha1', $str, PUNTOPAGOS_SECRET, true));
         	return "PP ".PUNTOPAGOS_KEY.":".$signature;
 	} else {
-		$signature = base64_encode(hash_hmac('sha256', $str, PUNTOPAGOS_SECRET, true));
+		$signature = base64_encode(hash_hmac('sha512', $str, PUNTOPAGOS_SECRET, true));
         	return "PP ".PUNTOPAGOS_KEY.":".$signature;
 	}
     }
