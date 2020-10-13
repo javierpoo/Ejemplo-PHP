@@ -32,10 +32,8 @@
     <label for="mediopago1">Medio Pago</label>
     <select class="form-control" id="mediopago1" name="mediopago1">
       <option value="">Ninguno</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
       <option value="3">Webpay</option>
-      <option value="10">Ripley</option>
+      <option value="10">Ripley (Chek)</option>
       <option value="21">Hites</option>
       <option value="22">Mi Pago</option>
       <option value="23">BancoEstado Multicanal</option>
@@ -44,6 +42,7 @@
       <option value="27">Chek</option>
       <option value="28">Sweetpay</option>
       <option value="29">Captura Diferida TBK</option>
+      <option value="31">Puntos CMR</option>
     </select>
   </div>
    <div class="form-group">  
