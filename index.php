@@ -43,7 +43,7 @@
       <option value="28">Sweetpay</option>
       <option value="29">Captura Diferida TBK</option>
       <option value="31">Puntos CMR</option>
-      <option value="21">Scotiabank</option>
+      <option value="32">Scotiabank</option>
 
     </select>
   </div>
