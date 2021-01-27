@@ -45,6 +45,11 @@
       <option value="31">Puntos CMR</option>
       <option value="32">Scotiabank</option>
 
+      <option value="60">PSP Todo</option>
+      <option value="61">PSP Crédito</option>
+      <option value="62">PSP Débito</option>
+      <option value="63">PSP Diferida</option>
+
     </select>
   </div>
    <div class="form-group">  
