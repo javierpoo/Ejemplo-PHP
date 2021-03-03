@@ -33,6 +33,7 @@
     <select class="form-control" id="mediopago1" name="mediopago1">
       <option value="">Ninguno</option>
       <option value="3">Webpay</option>
+      <option value="5">BCI</option>
       <option value="10">Ripley (Chek)</option>
       <option value="21">Hites</option>
       <option value="22">Mi Pago</option>
