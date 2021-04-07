@@ -49,12 +49,13 @@
       <option value="31">Puntos CMR</option>
       <option value="32">Scotiabank</option>
 
-      <option value="33">PSP Todo</option>
+      <option value="60">WebPay PSP Todo</option>
+      <option value="61">WebPay PSP Crédito</option>
+      <option value="62">WebPay PSP Débito</option>
+      
+      <option value="63">WebPay PSP Diferida</option>
 
-      <option value="34">PSP Diferida</option>
 
-      <option value="61">PSP Crédito</option>
-      <option value="62">PSP Débito</option>
       
     </select>
   </div>
