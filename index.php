@@ -48,6 +48,7 @@
       <option value="29">Captura Diferida TBK</option>
       <option value="31">Puntos CMR</option>
       <option value="32">Scotiabank</option>
+      <option value="35">FPAY</option>
 
       <option value="60">WebPay PSP Todo</option>
       <option value="61">WebPay PSP Crédito</option>
