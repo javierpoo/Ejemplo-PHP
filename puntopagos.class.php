@@ -26,6 +26,16 @@ class PuntoPagos {
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
     }
 	
+    public static function CrearSolicitudPago($trx_id, $monto, $email)
+    {
+        $funcion = 'solicitudpago/post';
+        $monto_str = number_format($monto, 2, '.', '');
+        $data = '{"trx_id":"'.$trx_id.'","monto":"'.$monto_str.'","email":"'.$email.'"}';
+	$firma = 'solicitudpago/crear';
+        $header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
+        return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
+    }
+	
     /**
     * Captura diferida de un monto de una transacción previamente autorizada 
     * @param string $trx_id Id de la transaccion asignado por la aplicacion cliente
