@@ -26,10 +26,15 @@ class PuntoPagos {
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
     }
 	
-    public static function CrearSolicitudPago($trx_id, $monto, $email)
+    public static function CrearSolicitudPago($trx_id, $medio_pago, $monto, $email, $celular)
     {
         $funcion = 'solicitudpago/post';
         $monto_str = number_format($monto, 2, '.', '');
+	//$dt = date("D, d M Y H:i:s", $currentTimeinSeconds)." GMT";
+        //$data = '{"fecha_vencimiento":"'.$dt.'","trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'"}';
+        $data = '{"trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'","email":"'.$email.'","celular":"'.$celular.'"}';
+
+	    
         $data = '{"trx_id":"'.$trx_id.'","monto":"'.$monto_str.'","email":"'.$email.'"}';
 	$firma = 'solicitudpago/crear';
         $header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
