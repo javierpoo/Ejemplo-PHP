@@ -55,7 +55,7 @@ class PuntoPagos {
     public static function CapturarTransaccion($token, $trx_id, $monto){
         $funcion = 'transaccion/capturar';
         $monto_str = number_format($monto, 2, '.', '');
-        $data = '{"trx_id":"'.$trx_id.'","token":"'.$token.'","monto":"'.$monto_str.'"}';
+        $data = '{"trxid":"'.$trx_id.'","token":"'.$token.'","monto":"'.$monto_str.'"}';
         $header_array = PuntoPagos::TraerHeaderConsulta($funcion, $token, $trx_id, $monto_str);	    
 	    
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
