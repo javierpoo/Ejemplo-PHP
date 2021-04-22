@@ -28,7 +28,7 @@ class PuntoPagos {
 	
     public static function CrearSolicitudPago($trx_id, $medio_pago, $monto, $email, $celular)
     {
-        $funcion = 'solicitudpago/post';
+        $funcion = 'solicitudpago';
         $monto_str = number_format($monto, 2, '.', '');
 	//$dt = date("D, d M Y H:i:s", $currentTimeinSeconds)." GMT";
         //$data = '{"fecha_vencimiento":"'.$dt.'","trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'"}';
