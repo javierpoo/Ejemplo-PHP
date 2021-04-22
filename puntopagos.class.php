@@ -53,7 +53,10 @@ class PuntoPagos {
         $monto_str = number_format($monto, 2, '.', '');
         $data = '{"trx_id":"'.$trx_id.'","token":"'.$token.'","monto":"'.$monto_str.'"}';
         $header_array = PuntoPagos::TraerHeaderConsulta($funcion, $token, $trx_id, $monto_str);
-
+	echo "$data ", var_dump($data);
+	echo "$header_array ", var_dump($header_array);
+	    
+	    
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
     }
     /**
