@@ -38,8 +38,8 @@ class PuntoPagos {
 	$firma = 'solicitudpago/crear';
         $header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
 	    
-	echo "$data ", var_dump($data);
-	echo "$header_array ", var_dump($header_array);
+	echo "data ", var_dump($data);
+	echo "header_array ", var_dump($header_array);
 	    
         return json_decode(PuntoPagos::ExecuteCommand(PUNTOPAGOS_URL.'/'.$funcion, $header_array, $data));
     }
