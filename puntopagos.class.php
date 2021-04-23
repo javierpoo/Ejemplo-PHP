@@ -188,11 +188,14 @@ class PuntoPagos {
         $result = curl_exec($ch);
         $error =  curl_error($ch);
         curl_close($ch);
-        if($result){
-            return $result;
+	
+	if($result){
+		echo "cur result ", var_dump($result);
+		return $result;
         }
         else{
-            return $error;
+		echo "cur error ", var_dump($error);
+    		return $error;
         }
 
     }
