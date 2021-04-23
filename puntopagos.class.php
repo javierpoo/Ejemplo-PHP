@@ -32,7 +32,7 @@ class PuntoPagos {
         $monto_str = number_format($monto, 2, '.', '');
 	//$dt = date("D, d M Y H:i:s", $currentTimeinSeconds)." GMT";
         //$data = '{"fecha_vencimiento":"'.$dt.'","trx_id":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'"}';
-        $data = '{"trxid":"'.$trx_id.'","medio_pago":"'.$medio_pago.'","monto":"'.$monto_str.'","email":"'.$email.'","celular":"'.$celular.'"}';
+        $data = '{"trxid":"'.$trx_id.'","mediopago":"'.$medio_pago.'","monto":"'.$monto_str.'","email":"'.$email.'","celular":"'.$celular.'"}';
 
 	    
 	$firma = 'solicitudpago/crear';
