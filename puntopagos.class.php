@@ -36,7 +36,7 @@ class PuntoPagos {
 
 	    
 	$firma = 'solicitudpago/crear';
-        $header_array = PuntoPagos::TraerHeader($funcion, $trx_id, $monto_str);
+        $header_array = PuntoPagos::TraerHeader($firma, $trx_id, $monto_str);
 	    
 	echo "data ", var_dump($data);
 	echo "header_array ", var_dump($header_array);
