@@ -182,6 +182,8 @@ class PuntoPagos {
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_USERAGENT, 'PuntoPagos-curl');
         curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+
         //execute post
         $result = curl_exec($ch);
         $error =  curl_error($ch);
